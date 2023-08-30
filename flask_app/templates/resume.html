@@ -1,0 +1,66 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+      <!-- For each institution - generate a row --> 
+      {% for inst_id, inst in resume_data.items() %}
+
+      <div class="horizontalbox">
+        <h1>{{ inst['name']}}</h1>
+
+        <!-- Checking if it has an address-->
+        {% if inst['address'] != None %}
+          <p class="rightadjust">{{ inst['address'] }},  {{ inst['city'] }}, {{ inst['state'] }} {{ inst['zip'] }}</p>
+        {% else %}
+          <p class="rightadjust">{{ inst['city'] }}, {{ inst['state'] }} {{ inst['zip'] }}</p>
+        {% endif %}
+      </div>
+
+      <!-- POSITIONS -->
+        {% if inst['positions'] != {} %}
+          {% for pos_id, pos in inst['positions'].items() %}
+          <!-- Box that contains the title of job and the date-->
+          <div class="horizontalbox">
+            <h2>{{ pos['title']}} </h2>   
+            <!-- Checking for end date-->
+              {% if pos['end_date'] != None %}
+                <p class="rightadjust">{{ pos['start_date'] }} - {{ pos['end_date'] }}</p>
+              {% else %}
+                <p class="rightadjust">{{ pos['start_date'] }}</p>
+              {% endif %}
+            </div>
+          </div>
+            <div class="horizontalbox">
+              <p id="responsibilities"> {{ pos['responsibilities'] }}</p>
+            </div>
+
+            {% if inst['positions'][pos_id]['experiences'] != {} %}
+              {% for exp_id, exp in inst['positions'][pos_id]['experiences'].items() %}
+                <div class="horizontalbox">
+                  {% if exp['hyperlink'] != None %}
+                    <a href="{{ exp['hyperlink'] }}"><h3 id="expname">{{ exp['name'] }}: </h3></a>
+                    <p id="expdesclink">{{ exp['description'] }}</p>
+                  {% else %}
+                    <h3 id="expname">{{ exp['name'] }}: </h3>
+                    <p id="expdesc">{{ exp['description'] }}</p>
+                  {% endif %}
+                </div>
+
+                {% if inst['positions'][pos_id]['experiences'][exp_id]['skills'] != {} %}
+                  {% for skill_id, skill in inst['positions'][pos_id]['experiences'][exp_id]['skills'].items() %}
+                    <p id="skills"> Skills Learned - {{skill['name'] }}: {{ skill['skill_level'] }}/10</p>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+      <hr>
+      {% endfor %}
+
+
+
+{% endblock %}
+
+

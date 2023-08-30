@@ -1,0 +1,91 @@
+body
+{
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+/** This section is for the button used for the feedback form **/
+
+#feedbackbuttonbox
+{
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    display: flex;
+    position: fixed;
+    top: 94%;
+    left: -1%;
+}
+
+#feedbackbutton
+{
+    background-color: #212121;
+    width: 10%;
+    height: 8%;
+    z-index: 100;
+
+    min-width: 100px;
+
+    
+}
+
+#feedbackbutton:hover
+{
+    opacity: 0.8;
+}
+
+#feedbackbutton p
+{
+    color: #FFFFFF;
+    text-decoration-style: solid;
+    font-size: 15px;
+
+    
+}
+
+/** This section is for the actual feedback form **/
+.feedbackbox    /** Box surrounding form **/
+{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    display: none;
+    position: fixed;
+
+    top: 20%;
+}
+
+.feedback       /** Actual form box **/
+{
+    background-color: #212121;
+    width: 25%;
+    height: 100%;
+    z-index: -100;
+    justify-items: center;
+    display: flex;
+
+    min-width: 360px;
+    min-height: 400px;
+
+    
+}
+
+.feedbackform   /** The actual form object with the inputs **/
+{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+.feedbackform input
+{
+    padding: 25px;
+    margin: 12px;
+}

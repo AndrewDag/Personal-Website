@@ -1,0 +1,100 @@
+{% extends 'shared/new_layout.html' %}
+
+{% block maincontent %}
+<div class="projectcontent">
+    <h1>PROFESSIONAL</h1>
+    <hr>
+    <div class="projectwrap">
+        <div class="projectwithimage">
+            <div class="companytime">
+                <h2>Ford Motor Company</h2>
+                <p id="datetext">5/23 - 8/23</p>
+            </div>
+            
+            <img id='mainimage' src="../static/main/images/Ford-Logo.png" alt="Ford Logo" loading="lazy">
+            <h3>Summary</h3>
+            <p>In my time with Ford, I worked on a team that designed an automated tool to streamline the creation of Terraform infrastructure for various Google Cloud
+                Services as a method of canary testing each service. <br><br>
+                The tool accesses GitHub and analyzes JSON files to pull nessecary Terraform files from remote repositories. The tool then places them into a local
+                environment where Terraform infrastrcture can be built. It can even make changes to individual values in the Terraform files
+                if it was deemed nessecary to do so.<br><br> 
+                Utilizing Python in conjunction with Flask, a localized application is created and it allows for seamless
+                connection between the tool's frontend and backend components.</p>
+            
+            <h3>Skills</h3>
+            <div class="techcol">
+                <div class="skillwithname">
+                    <img src="../static/main/images/terraform.png" alt="Terraform Logo" title="Terraform" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/python.png" alt="Python Logo" title="Python" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/flask.png" alt="Flask Logo" title="Flask" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/github.png" alt="GitHub Logo" title="GitHub" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>PERSONAL</h1>
+    <hr>
+    <div class="projectwrap">
+        <div class="projectwithimage">
+            <div class="companytime">
+                <h2>This Website!</h2>
+                <p id="datetext"></p>
+            </div>
+            
+            <img id='mainimage' src="../static/main/images/ADlogoblue.png" alt="Ford Logo" loading="lazy">
+            <h3>Summary</h3>
+            <p>I created this website by hand and from scratch using just HTML, CSS, Jinja, and Python's Flask based on the skills that
+                I learned while taking CSE 477 (Web Application Development).</p>
+            
+            <h3>Skills</h3>
+            <div class="techcol">
+                <div class="skillwithname">
+                    <img src="../static/main/images/html.png" alt="HTML Logo" title="HTML" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/css.png" alt="CSS Logo" title="CSS" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/python.png" alt="Python Logo" title="Python" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/flask.png" alt="Flask Logo" title="Flask" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/jinja.png" alt="Jinja Logo" title="Jinja" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="projectwrap">
+        <div class="projectwithimage">
+            <div class="companytime">
+                <h2>Blackjack</h2>
+                <p id="datetext"></p>
+            </div>
+            
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YBWi0lM2q5k?si=cWJXX-ATZNtZ_Wlq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>Summary</h3>
+            <p>As a fun little project I created the game of Blackjack entirely in Python. This includes the ability
+                to split your hand into two hands when you recieve two cards of the same value. As a bonus, it also collects the
+                data of every game played through Python's Pandas library.
+            </p>
+            
+            <h3>Skills</h3>
+            <div class="skillwithname">
+                <img id="singleskill" src="../static/main/images/python.png" alt="Python Logo" title="Python" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

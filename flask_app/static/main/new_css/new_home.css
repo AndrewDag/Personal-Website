@@ -1,0 +1,218 @@
+.homewrap
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.homewrap h1
+{
+    color: #1982C4;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 55px;
+
+    margin: 0;
+
+    font-weight: normal;
+}
+
+#canvash1
+{
+    color: black;
+    font-size: 35px;
+}
+.homewrap h2
+{
+    color: #454955;
+
+    font-family:'Courier New', Courier, monospace;
+
+    margin-top: 0;
+}
+
+.homewrap h3
+{
+    color: #454955;
+
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+#mepic
+{
+    border-radius: 50%;
+
+    margin-bottom: 3%;
+
+    width: 30%; 
+
+    min-width: 258px;
+    max-width: 258px;
+    min-height: 258px;
+    max-height: 258px;
+
+}
+
+.homecontent
+{
+    width: 100vw;
+    display: flex;
+
+    flex-direction:column;
+
+    align-items: center;
+
+    margin: 8%;
+
+    margin-top: 6%;
+
+    margin-bottom: 2%;
+
+    width: 80vw;
+
+}
+
+.bio
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.hometext
+{
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+
+    margin-left: 3%;
+}
+
+.hometext hr
+{
+    background-color: #1982C4;
+
+    height: 3px;
+
+    border: none;
+}
+
+.contact
+{
+    width: 40%;
+    height: 50px;
+
+
+
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+
+.icontext
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    margin-right: 20px;
+    
+}
+
+.icontext img
+{
+    width: 30px;
+}
+
+.canvases
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.blankcanvas
+{
+
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px;
+
+}   
+
+.techcolhome
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 60%;
+
+    
+
+    max-width: 520px;
+
+}
+
+.techcolhome img
+{
+    width: 125px;
+    height: auto;
+
+    padding: 10px;
+}
+
+#oddcanvas
+{
+    background-color: #e8e8e9;
+}
+
+@media screen and (max-width: 900px)
+{
+    .techcolhome img
+    {
+        width: 90px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 650px)
+{
+    #mepic
+    {
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+    .homecontent h1
+    {
+        font-size: 40px;
+    }
+    .homecontent h2
+    {
+        font-size: 20px;
+    }
+    .homecontent h3
+    {
+        font-size: 15px;
+    }
+
+    .techcolhome img
+    {
+        width: 50px;
+    }
+}

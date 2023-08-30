@@ -1,0 +1,26 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<div class="maincontent">
+  <img src="../static/main/images/new_headshot.jpg" alt="Picture of Andrew" title="Me!" loading="lazy">
+  <div class="maintxt">
+    <p>My name is <strong>Andrew Dagostino</strong> and I am a Junior Computer Science student here at Michigan State University. I am currently enrolled
+       in this class, CSE 431, STT 351, and IAH 211C. I was born in Seattle but grew up in Bloomfield Hills, MI. I just recently accepted an internship at Ford for the summer in their 
+       Information Technology Summer Internship program and I am very excited about that.<br><br> In my free time I like to play basketball,
+      and I am on an IM Leagues Team where we usually play once a week. I also love to disc golf and play the courses surrounding
+      East Lansing when it's warm outside. I'm also a huge coffee snob and enjoy making lattes for myself with my espresso machine
+      in the morning. As an avid music listener, I recently acquired a record player and now have six vinyls. I also love to collect
+      coins!<br><br>In the future I hope to be a Software Developer. I'm currently leaning towards backend, but I took this class
+      to see how I like frontend. So far I'm enjoying it! Looking forward to what more I will learn in this class.</p>
+  </div>
+</div>
+<!-- All "heading" divs are simply text with a line -->
+<div class="heading">
+  <hr />
+  <p style="font-size:20px"> Fun Fact: </p>
+  <p>{{fun_fact}}</p>
+</div>
+<!-- <p>A fun fact about me: <b>{{fun_fact}}</b> </p>-->
+{% endblock %}
+
+

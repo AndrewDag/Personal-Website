@@ -1,0 +1,17 @@
+{% extends 'shared/layout.html' %}
+
+
+{% block maincontent %}
+
+<div class="nftmain">
+    {% if session['role'] != 'guest' %}
+        <h1>Administrator {{user}}'s Wallet</h1>
+    {% else %}
+        <h1>{{user}}'s Wallet</h1>
+    {% endif %}
+    <h2>TOKENS: ${{tokens}}</h1>
+    <h2>PERSONAL KEY: {{key}}</h1>
+
+</div>
+
+{% endblock %}

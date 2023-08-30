@@ -1,0 +1,20 @@
+{% extends 'shared/layout.html' %}
+
+
+{% block maincontent %}
+
+{% if session['role'] != 'guest' %}
+    <div class="historymain">
+        <h1>History of NFT ID: {{id}}</h1>
+        <button id="historybutton" type="button" onclick="window.location.href='/nft/buy'">Go Back</button>
+        <h2>Created by User ID: {{userid}}</h2>
+        {% for i in range(transactions | length) %}
+            <h2>Transaction {{i+1}}: {{transactions[i]['date']}}</h2>
+            <h2>Sold For ${{transactions[i]['cost']}} tokens by User ID: {{transactions[i]['sellerID']}} to User ID: {{transactions[i]['buyerID']}}</h2>
+            <hr>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+{% endblock %}

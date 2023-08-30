@@ -1,0 +1,165 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrew Dagostino</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='piano/css/piano.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/body.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/resume.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/process.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/login.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/nftcss/nft.css') }}">
+	<link rel="icon" href="../static/main/images/basketball.ico" type="image/x-icon"/> 
+  {% block extracss %}{% endblock %}
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body onload="displayEmail()">
+
+    <!-- The header  -->
+    <header>	
+      <img src="../static/main/images/new_banner.jpg" alt="Banner Image" id="banner" title="" loading="lazy">
+    </header>
+
+    <!-- The navigation bar -->
+    <nav>
+  	<!-- Container for the navbar contents -->
+		<div class="navcontainer">
+			<div class="navbar" style="font-size:20px">
+        <!-- Displays default Homework title if not logged in-->
+        {% if "email" not in session %}
+          {% if session['page'] != "nft" %}
+				    <div class="navwords"><strong>CSE 477 - Final Exam</strong></div>
+          {% else %}
+            <div class="navwords"><strong>Welcome to the Gridie Marketplace!</strong></div>
+          {% endif %}
+        <!-- Uses displayEmail() onload function to display the email from the cookies-->
+        {% else %}
+          <div class="navwords" id="sessionemail"><p></p></div>
+        {% endif %}
+        {% if session['page'] != 'nft' %}
+          <ul>
+            <li><a class ="txt" href="/home"><strong>Home</strong></a></li>
+            <li><a class ="txt" href="/projects"><strong>Projects</strong></a></li>
+            <li><a class ="txt" href="/resume"><strong>Resume</strong></a></li>
+            {% if "email" in session %}
+              <li><a class ="txt" href="/logout"><strong>Logout</strong></a></li>
+            {% else %}
+              <li><a class ="txt" href="/login"><strong>Login</strong></a></li>
+            {% endif %}
+            <li><a class ="txt" href="/nft/signup"><strong>Sign Up</strong></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/andrew-dagostino-58887022b" target="_blank"><img src="../static/main/images/social-linkedin.png" alt="LinkedIn" style="width:50px;height:50px;" loading="lazy"></a></li>
+            <li><button onclick="dropdownbar()" id="dropbutton"><img src="../static/main/images/menu-bar.png" alt="Menu" width="50px" height="50px" loading="lazy"></button></li>
+          </ul>
+        {% else %}
+        <ul>
+          <li><a class ="txt" href="/home"><strong>Home</strong></a></li>
+          <li><a class ="txt" href="/nft/buy"><strong>Buy Gridies</strong></a></li>
+          <li><a class ="txt" href="/nft/sell"><strong>Sell Gridies</strong></a></li>
+          <li><a class ="txt" href="/nft/wallet"><strong>Wallet</strong></a></li>
+          {% if "email" in session %}
+            <li><a class ="txt" href="/logout"><strong>Logout</strong></a></li>
+          {% else %}
+            <li><a class ="txt" href="/login"><strong>Login</strong></a></li>
+          {% endif %}
+          <li><a class ="txt" href="/nft/signup"><strong>Sign Up</strong></a></li>
+            <li><button onclick="dropdownbar()" id="dropbuttonnft"><img src="../static/main/images/menu-bar.png" alt="Menu" width="50px" height="50px" loading="lazy"></button></li>
+        </ul>
+
+        {% endif %}
+			</div>
+		</div>
+		<!-- The dropdown menu for when the site is in mobile view (hidden by default) -->
+    {% if session['page'] != 'nft' %}
+      <div id="dropdownbox">
+        <a class ="droptxt" href="/home"><strong>Home</strong></a></li>
+        <hr>
+        <a class ="droptxt" href="/projects"><strong>Projects</strong></a></li>
+        <hr>
+        <a class ="droptxt" href="/resume"><strong>Resume</strong></a></li>
+        <hr>
+        {% if "email" in session %}
+          <a class ="droptxt" href="/logout"><strong>Logout</strong></a></li>
+        {% else %}
+          <a class ="droptxt" href="/login"><strong>Login</strong></a></li>
+        {% endif %}
+        <hr>
+        <a class="droptxt" href=/nft/signup><strong>Sign Up</strong></a></li>
+        <hr>
+        <a class="droptxt" href="https://www.linkedin.com/in/andrew-dagostino-58887022b" target="_blank"><strong>LinkedIn</strong></a></li>
+      </div>
+    {% else %}
+      <div id="dropdownbox">
+        <a class ="droptxt" href="/home"><strong>Home</strong></a></li>
+        <hr>
+        <a class ="droptxt" href="/nft/buy"><strong>Buy Gridies</strong></a></li>
+        <hr>
+        <a class ="droptxt" href="/nft/sell"><strong>Sell Gridies</strong></a></li>
+        <hr>
+        <a class ="droptxt" href="/nft/wallet"><strong>Wallet</strong></a></li>
+        <hr>
+        {% if "email" in session %}
+          <a class ="droptxt" href="/logout"><strong>Logout</strong></a></li>
+        {% else %}
+          <a class ="droptxt" href="/login"><strong>Login</strong></a></li>
+        {% endif %}
+        <a class ="droptxt" href="/nft/signup"><strong>Sign Up</strong></a></li>
+        <hr>
+      </div>
+
+    {% endif %}
+    </nav>
+
+    <!-- The main content  -->
+    <main>
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    </article>
+
+    <div id="feedbackbuttonbox">
+      <button id="feedbackbutton" onclick="feedbackform()">
+        <p>Feedback</p>
+      </button>
+    </div>
+
+    <div class="feedbackbox" id="feedbackbox">
+      <div class="feedback" id="feedback">
+        <form class="feedbackform" action="/processfeedback" method="post">
+          <input type ='text' name='name' id="name" placeholder="Your Name" autocomplete="off">
+          <input type ='text' name='email' id="email" placeholder="Your Email" autocomplete="off">
+          <input type ='text' name='typedfeedback' id="typedfeedback" placeholder="Your Feedback" autocomplete="off">
+          <input id="submitbutton" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+  
+</body>
+    <!-- The footer of the file -->
+    <footer>
+      <div class="footcontainer">
+        <p class="foottext" align="justify"><center> ©2023 Andrew T. Dagostino </center></p>
+      </div>
+  
+    </footer>
+
+</html>
+
+<script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+<script src="{{ url_for('static', filename='main/js/buttons.js') }}" defer></script>
+<script src="{{ url_for('static', filename='main/js/nft.js') }}" defer></script>
+
+
+
+
+
+
+
+

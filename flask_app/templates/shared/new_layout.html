@@ -1,0 +1,46 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrew Dagostino</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/new_css/new_main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/new_css/new_home.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/new_css/new_personal.css') }}">
+  <link rel="icon" type="image/x-icon" href="../static/main/images/ADlogoblue.ico"/> 
+  {% block extracss %}{% endblock %}
+  <!-- <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script> -->
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- The navigation bar -->
+            <nav>
+                <div class="navbox">
+                    <ul>
+                        <li><img src="../static/main/images/ADlogoblue.png" alt="Andrew's Logo" title="Andrew Logo" loading="lazy"></li>
+                        <li><a class="boldwhite" href="/"><strong>HOME</strong></a></li>
+                        <li><a class="boldwhite" href="/personal-projects"><strong>PROFESSIONAL & PERSONAL PROJECTS</strong></a></li>
+                        <li><a class="boldwhite" href="/school-projects"><strong>SCHOOL PROJECTS</strong></a></li>
+                        <li><a class="boldwhite" href="../static/Resume.pdf" target="_blank"><strong>RESUME</strong></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <!-- The main content  -->
+            <main>
+            {% block maincontent %}{% endblock %}
+            </main>
+        </div>
+        <!-- The footer of the file -->
+        <footer>
+            <p>©2023 Andrew T. Dagostino</p>
+        </footer>
+    </div>
+</body>
+
+</html>

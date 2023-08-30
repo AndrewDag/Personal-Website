@@ -1,0 +1,5 @@
+"inst_id","type","name","department","address","city","state","zip"
+"1","Academia","Michigan State University","Computer Science",NULL,"East Lansing","Michigan","48823"
+"2","Marketing","EventNext",NULL,"3340 S Lapeer Rd","Lake Orion","Michigan","48359"
+"3","Customer Service","Kura Revolving Sushi Bar", NULL, "736 W Big Beaver Rd","Troy","Michigan","48084"
+"4","Customer Service","Bloomfield Hills Swim and Tennis", NULL, "251 E Square Lake Rd","Bloomfield Hills","Michigan","48302"

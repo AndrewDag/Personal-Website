@@ -1,0 +1,15 @@
+header {
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   /* Even if width overflows page it gets stopped */
+    max-height: 200px;
+}
+
+header img {
+    width: 100vw;
+    max-width: auto;
+    height: 100vh;
+    max-height: 200px;
+    object-fit: cover; /* make image cover entire header area */
+}

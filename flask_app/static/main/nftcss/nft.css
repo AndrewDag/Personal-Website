@@ -1,0 +1,311 @@
+/* MAIN WELCOME NFT CONTENT */
+.nftmain
+{
+
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+
+}
+
+.nftmain h1
+{
+    font-size: 60px;
+
+    color: rgb(33, 165, 194);
+}
+
+.nftmain h2
+{
+    font-size: 50px;
+
+    color: rgb(65, 65, 65);
+}
+
+.nftbuttons
+{
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+
+}
+
+.nftbuttons button
+{
+    background-color: rgb(33, 165, 194);
+    border: none;
+    text-decoration: none;
+
+    margin: 10px;
+
+    width: 400px;
+    height: 100px;
+
+    font-size: 20px;
+}
+
+.nftbuttons button:hover
+{
+    opacity: 0.8;
+}
+
+/* SELLER PAGE */
+
+/* Big div for the NFT creation area */
+.nftcreate  
+{
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+
+    width: 50%;
+
+    padding: 10px;
+
+    background-color: rgb(209, 209, 209);
+
+    min-width: 812px;
+
+}
+
+.nftcreate input
+{
+    height: 50px;
+}
+
+.nftinfo    /* NFT Create elements */
+{
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 100%;
+    width: 20%;
+
+    margin: auto;
+}
+
+.nftinfo input
+{
+    width: 100%;
+    height: 50px;
+
+    margin: 5px;
+}
+
+.nftinfo p
+{
+    font-size: 20px;
+}
+
+
+
+#uploadbutton
+{
+    margin-left: 60%;
+}
+
+/* FOR DISPLAYING ALL OF USER'S NFTS ON THE SELL PAGE */
+.usernfts  
+{
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    width: 75%;
+
+    padding: 10px;
+
+    border: 2px solid black;
+
+    background-color: rgb(209, 209, 209);
+
+    min-width: 1211px;
+
+
+    margin-top: 10px;
+}
+
+/* BOX THAT CONTAINS EACH NFT AND ITS INFO */
+.nftbox
+{
+    border: 2px solid black;
+
+    width: 49%;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+    margin: 3px;
+}
+
+.nftbox img
+{
+    transform: scale(0.6, 0.6);
+
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.nftelements
+{
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    
+
+}
+
+.nftelements h3
+{
+    height: 5px;
+}
+
+.tokens
+{
+    color: rgb(33, 165, 194);
+}
+
+/* FORM FOR EDITING NFTS */
+.nftedit
+{
+    visibility: hidden;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+
+.nftedit input
+{
+    width: 50%;
+    height: 20%;
+
+    margin: 10px;
+}
+
+#adminbutton
+{
+    background-color: rgb(67, 0, 125);
+    color: #fff;
+}
+
+/* The history data */
+.historymain
+{
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+}
+
+.historymain h1
+{
+    font-size: 40px;
+
+    color: rgb(33, 165, 194);
+}
+
+#historybutton
+{
+    width: 10%;
+    margin-left: 2%;
+}
+
+#adminmessage
+{
+    color: rgb(67, 0, 125);
+}
+
+
+
+@media screen and (max-width: 1200px)
+{
+    .usernfts
+    {
+        min-width: 800px;
+    }
+
+    .nftbox
+    {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+
+    .nftmain h1
+    {
+        font-size: 40px;
+    }
+
+    .nftmain h2
+    {
+        font-size: 30px;
+    }
+
+    .nftbuttons button
+    {
+        width: 200px;
+        height: 50px;
+
+        font-size: 15px;
+    }
+
+    .nftcreate
+    {
+
+        min-width: 500px;
+    }
+
+    .nftcreate p
+    {
+        font-size: 1em;
+    }
+
+    #uploadbutton
+    {
+        margin-left: 30%;
+    }
+
+    .usernfts
+    {
+        min-width: 400px;
+    }
+
+    .nftelements
+    {
+        width: 80%;
+    }
+
+    #description
+    {
+        font-size: 1em;
+    }
+}

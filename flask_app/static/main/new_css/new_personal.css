@@ -1,0 +1,184 @@
+.projectcontent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.projectcontent h1
+{
+    color: #454955;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 55px;
+
+    margin: 2%;
+
+    font-weight: normal;
+}
+
+.projectcontent hr
+{
+    background-color: #1982C4;
+
+    height: 3px;
+
+    width: 80%;
+
+    border: none;
+}
+
+/* */
+
+.projectwrap
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectwithimage
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 60%;
+
+    margin-bottom: 2%;
+}
+
+.companytime
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+#datetext
+{
+    font-size: 15px;
+
+    margin: 0;
+}
+
+.projectwithimage h2
+{
+    color: #454955;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+
+    margin: 0;
+}
+
+.projectwithimage h3
+{
+    color: #454955;
+    align-self:flex-start;
+
+    font-family:'Courier New', Courier, monospace;
+
+    font-size: 25px;
+
+}
+
+#mainimage
+{
+    width: 30%;
+    height: auto;
+
+    margin-bottom: 5%;
+}
+
+.techcol
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 60%;
+
+    min-width: 520px;
+
+}
+
+.techcol img
+{
+    width: 80px;
+    height: auto;
+
+    padding: 10px;
+}
+
+.skillwithname
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectwithimage p
+{
+    text-decoration: none;
+    font-size: 20px;
+    
+    font-family:'Courier New', Courier, monospace;
+
+    margin: 0;
+}
+
+.youtube
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 2%;
+}
+
+#singleskill
+{
+    align-self: center;
+    width: 80px;
+    height: auto;
+
+    padding: 10px;
+}
+
+@media screen and (max-width: 650px)
+{
+
+    .techcol img
+    {
+        width: 50px;
+    }
+
+    .techcol
+    {
+        justify-content: center;
+        min-width: 150px;
+        max-width: 250px;
+    }
+
+    .youtube
+    {
+        flex-direction: column;
+    }
+
+    .youtube iframe
+    {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        max-width: 396px;
+        min-width: 396px;
+    }
+}

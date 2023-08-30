@@ -1,0 +1,62 @@
+{% extends 'shared/new_layout.html' %}
+
+{% block maincontent %}
+<div class="homewrap">
+    <div class="homecontent">
+        <div class="bio">
+            <img id="mepic" src="../static/main/images/new_headshot.jpg" alt="Picture of Andrew" title="Me!" loading="lazy" >
+            <div class="hometext">
+                <h1>Andrew T. Dagostino</h1>
+                <h2>Senior at Michigan State studying Computer Science</h2>
+                <hr>
+                <h3>I'm a highly organized student who excels at time management and is eager to apply his knowledge of software
+                    engineering in a workplace with other inspired individuals. </h3>
+                
+                <div class="contact">
+                    <div class="icontext">
+                        <a href="mailto: andrewdag12@gmail.com"><img src="../static/main/images/emailAsset.png" alt="Email Icon" title="andrewdag12@gmail.com" loading="lazy"></a>
+                    </div>
+                    <div class="icontext">
+                        <a href="https://www.linkedin.com/in/andrew-dagostino-58887022b/" target="_blank"><img src="../static/main/images/LinkedinAsset.png" alt="LinkedIn Icon" loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="canvases">
+        <div id = "oddcanvas" class="blankcanvas">
+            <h1 id="canvash1">Skills</h1>
+            <div class="techcolhome">
+                <div class="skillwithname">
+                    <img src="../static/main/images/python.png" alt="Python Logo" title="Python" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/html.png" alt="HTML Logo" title="HTML" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/C++.png" alt="C++ Logo" title="C++" loading="lazy">
+                </div>
+            </div>
+            <h3><strong>Python, HTML, CSS, Flask, Agile</strong>, C++, Javascript, Terraform, C, ARM Assembly</h3>
+        </div>
+        <div class="blankcanvas">
+            <h1 id="canvash1">Hobbies</h1>
+            <div class="techcolhome">
+                <div class="skillwithname">
+                    <img src="../static/main/images/chess.jpg" alt="Chess King" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/coin.png" alt="Coin Icon" loading="lazy">
+                </div>
+                <div class="skillwithname">
+                    <img src="../static/main/images/cooking.png" alt="Cooking Icon" loading="lazy">
+                </div>
+            </div>
+            <h3>Chess, Coin Collecting, Cooking, Video Games, Basketball </h3>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

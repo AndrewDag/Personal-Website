@@ -1,0 +1,39 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+<main>
+	<!-- All "heading" divs are simply text with a line -->
+	<div class="heading">
+		<p style = "font-size: 20px;">Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to it - we see you.</p>
+		<hr />
+	</div>
+	<!-- Piano box that contains all piano contents -->
+	<div id="pianobox">
+		<img src="../static/piano/images/texture.jpeg" id="monsterimg" loading="lazy">
+		<p class="pianotext"> <i><strong>The Great Old One</strong></i></p>
+		<div id="keybox">
+			<!-- Each key is either a white or black key and has individual ids for each -->
+			<div class = "whitekey" id="white1"><p>A</p></div>
+			<div class = "blackkey" id="black1"><p>W</p></div>
+			<div class = "whitekey" id="white2"><p>S</p></div>
+			<div class = "blackkey" id="black2"><p>E</p></div>
+			<div class = "whitekey" id="white3"><p>D</p></div>
+			<div class = "whitekey" id="white4"><p>F</p></div>
+			<div class = "blackkey" id="black3"><p>T</p></div>
+			<div class = "whitekey" id="white5"><p>G</p></div>
+			<div class = "blackkey" id="black4"><p>Y</p></div>
+			<div class = "whitekey" id="white6"><p>H</p></div>
+			<div class = "blackkey" id="black5"><p>U</p></div>
+			<div class = "whitekey" id="white7"><p>J</p></div>
+			<div class = "whitekey" id="white8"><p>K</p></div>
+			<div class = "blackkey" id="black6"><p>O</p></div>
+			<div class = "whitekey" id="white9"><p>L</p></div>
+			<div class = "blackkey" id="black7"><p>P</p></div>
+			<div class = "whitekey" id="white10"><p>;</p></div>
+		</div>
+
+	</div>
+
+</main>
+{% endblock %}
