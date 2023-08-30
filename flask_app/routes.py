@@ -332,28 +332,12 @@ def processlogin():
 	return json.dumps({"success": 2})
 
 
-
-#######################################################################################
-# CHATROOM RELATED
-#######################################################################################
-@app.route('/chat')
-@login_required
-def chat():
-    session['page'] = 'chat'
-    return render_template('chat.html', user=getUser())
-
-@socketio.on('joined', namespace='/chat')
-def joined(message):
-    join_room('main')
-    emit('status', {'msg': getUser() + ' has entered the room.', 'style': 'width: 100%;color:blue;text-align: right'}, room='main')
-
-
 #######################################################################################
 # OTHER
 #######################################################################################
 @app.route('/')
 def root():
-    return render_template('new_html/new_home.html')
+    return render_template("new_html/index.html")
 
 @app.route('/personal-projects')
 def personal():
