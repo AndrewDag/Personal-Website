@@ -1,7 +1,6 @@
 # Author: Prof. MM Ghassemi <ghassem3@msu.edu>
 from flask import current_app as app
 from flask import render_template, redirect, request, session, url_for, copy_current_request_context
-from flask_socketio import SocketIO, emit, join_room, leave_room, close_room, rooms, disconnect
 from .utils.blockchain.database  import database
 from .utils.blockchain.blockchain  import Blockchain
 from .utils.blockchain.blockchain  import Block
@@ -14,7 +13,6 @@ import os
 import functools
 import datetime
 import cgitb; cgitb.enable()
-from . import socketio
 db = database()
 
 
