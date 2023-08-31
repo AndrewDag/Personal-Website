@@ -337,15 +337,15 @@ def processlogin():
 #######################################################################################
 @app.route('/')
 def root():
-    return render_template("new_html/index.html")
+    return render_template("index.html")
 
 @app.route('/personal-projects')
 def personal():
-    return render_template('new_html/personal_projects.html')
+    return render_template('personal_projects.html')
 
 @app.route('/school-projects')
 def school():
-    return render_template('new_html/school_projects.html')
+    return render_template('school_projects.html')
 
 @app.route('/home')
 def home():
