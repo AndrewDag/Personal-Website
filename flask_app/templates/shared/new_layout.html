@@ -26,9 +26,20 @@
                         <li><a class="boldwhite" href="/personal-projects"><strong>PROFESSIONAL & PERSONAL PROJECTS</strong></a></li>
                         <li><a class="boldwhite" href="/school-projects"><strong>SCHOOL PROJECTS</strong></a></li>
                         <li><a class="boldwhite" href="../static/Resume.pdf" target="_blank"><strong>RESUME</strong></a></li>
+                        <li><button onclick="dropdownbarnew()" id="dropbutton"><img src="../static/main/images/menu-bar.png" alt="Menu" width="50px" height="50px" loading="lazy"></button></li>
                     </ul>
                 </div>
             </nav>
+            <div id="dropdownboxnew">
+                <a href="/"><strong>HOME</strong></a></li>
+                <hr class="drophr">
+                <a href="/personal-projects"><strong>PROFESSIONAL & PERSONAL PROJECTS</strong></a></li>
+                <hr class="drophr">
+                <a href="/school-projects"><strong>SCHOOL PROJECTS</strong></a></li>
+                <hr class="drophr">
+                <a href="../static/Resume.pdf" target="_blank"><strong>RESUME</strong></a></li>
+                <hr class="drophr">
+            </div>
 
 
             <!-- The main content  -->
@@ -44,3 +55,5 @@
 </body>
 
 </html>
+
+<script src="{{ url_for('static', filename='main/js/buttons.js') }}" defer></script>

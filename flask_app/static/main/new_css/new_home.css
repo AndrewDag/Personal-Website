@@ -180,6 +180,11 @@
     background-color: #e8e8e9;
 }
 
+#github
+{
+    filter: invert(25%) sepia(4%) saturate(2499%) hue-rotate(187deg) brightness(90%) contrast(79%);
+}
+
 @media screen and (max-width: 900px)
 {
     .techcolhome img

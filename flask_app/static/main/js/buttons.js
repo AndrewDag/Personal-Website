@@ -15,6 +15,22 @@ function dropdownbar()
     
 }
 
+function dropdownbarnew()
+{
+    let drop = document.getElementById("dropdownboxnew");
+
+
+    if(drop.style.display === 'flex')
+    {
+        drop.style.display = 'none';
+    }
+    else
+    {
+        drop.style.display = 'flex';
+    }
+    
+}
+
 /** Functionality for the feedback form button */
 function feedbackform()
 {
