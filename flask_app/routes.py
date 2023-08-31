@@ -337,6 +337,7 @@ def processlogin():
 #######################################################################################
 @app.route('/')
 def root():
+    print("THING:", __file__)
     return render_template("index.html")
 
 @app.route('/personal-projects')
