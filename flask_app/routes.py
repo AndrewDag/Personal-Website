@@ -337,7 +337,7 @@ def processlogin():
 #######################################################################################
 @app.route('/')
 def root():
-    return render_template("new_html/new_home.html")
+    return render_template("new_html/index.html")
 
 @app.route('/personal-projects')
 def personal():
