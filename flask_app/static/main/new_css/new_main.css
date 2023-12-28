@@ -108,6 +108,7 @@ footer p
 #dropdownboxnew
 {
     display: none;
+    visibility: hidden;
     width: 99.1%;
     flex-direction: column;
 
@@ -154,6 +155,10 @@ footer p
    {
     visibility: hidden;
     display: none;
+   }
+   #dropdownboxnew
+   {
+    visibility: visible;
    }
    
 }

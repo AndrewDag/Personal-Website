@@ -30,9 +30,11 @@ def get_images():
 
     only_img_files = ""
 
-    # Only extensions that should be used are image extensions
+    # Only extensions that should be used are image extensions (IMAGES SHOULD BE FORMATTED "name.extension" or else there is risk of breaking)
     for img in img_files:
+        print(img)
         extension = img.split(".")[-1]
+        print(extension)
         if extension == "png" or extension == "jpg" or extension == "jpeg" or extension == "gif":
             only_img_files += img + " "
         

@@ -55,12 +55,21 @@
     <h1>WEB DEVELOPMENT ARCHITECTURE</h1>
     <hr>
     <div class="projectwrap">
-        <div class="projectwithimage">
+        <div class="projectwithmultiimage" id="477">
             <div class="companytime">
                 <h2>Personal Website</h2>
                 <p id="datetext">1/23 - 5/23</p>
             </div>
-            <img id='mainimage' src="../static/main/images/oldwebsite.png" alt="Old Website" loading="lazy">
+            <div class="imagebox" onclick="displaymultiimage.call(this, event)">
+                <div class="youtube">
+                    <img id='mainimage' src="../static/main/images/oldwebsite.png" alt="Old Website" loading="lazy">
+                </div>
+                <!-- <img id='mainimage' class='mainimage' src="../static/main/images/rpm-logo.jpg" alt="RPM Logo" loading="lazy"> -->
+                <div class="boxtoseemore">
+                    <p>Click to see more!</p>
+                </div>
+            </div>
+            
             <h3>Summary</h3>
             <p>During CSE 477 I developed a personal website that made use of HTML, CSS, Javascript, Jinja, SQL,  and Python's Flask. <br><br>
                 Some of the features of the website included a Javascript piano, a login and sign up system, and an NFT Marketplace with a transaction history system that uses SQL tables to store the information.
