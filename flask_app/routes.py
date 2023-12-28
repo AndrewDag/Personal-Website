@@ -24,7 +24,6 @@ def school():
 @app.route('/getimagefiles', methods = ["POST", "GET"])
 def get_images():
     print("Getting images")
-    print(img_path)
     print(os.listdir("."))
     img_path = list(request.form.keys())[0]
 
