@@ -26,6 +26,9 @@ def get_images():
     print("Getting images")
     img_path = list(request.form.keys())[0]
 
+    print(img_path)
+    print(os.listdir("."))
+
     img_files = os.listdir(img_path)
 
     only_img_files = []
