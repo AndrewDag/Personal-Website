@@ -121,6 +121,7 @@ function change_image(inc, clicked_element)
             {
                 current_img_index += inc;
                 document.getElementById("currentimage").src = "../../static/main/images/" + clicked_element.id + "-images/" + image_array[current_img_index];
+                document.getElementById("imagecountertext").innerHTML = (current_img_index + 1) + "/" + image_array.length
             }
             console.log("IMG INDEX: " + current_img_index + " AT IMAGE: " + image_array[current_img_index])
 
