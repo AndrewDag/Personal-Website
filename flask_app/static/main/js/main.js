@@ -29,12 +29,14 @@ function displaymultiimage(event)
     //Box for images to be put into
     let imgbox = document.getElementById("imgbox");
 
+    // First image
+    change_image(0, clicked_element);
+
 
     /*Toggle on overlay */
     overlay.style.display = "flex";
 
-    // First image
-    change_image(0, clicked_element);
+
 
     /* DEFINING FUNCTIONS */
 
