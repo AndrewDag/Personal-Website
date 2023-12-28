@@ -4,7 +4,6 @@ from flask import render_template, redirect, request, session, url_for, copy_cur
 import os
 import cgitb; cgitb.enable()
 import os
-import jsonpickle
 
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -24,11 +23,8 @@ def school():
 
 @app.route('/getimagefiles', methods = ["POST", "GET"])
 def get_images():
-    print("Getting images")
-    print(os.listdir("."))
     img_path = list(request.form.keys())[0]
 
-    #print(os.listdir("./mysite/flask_app/static/main/images/rpm-images/"))
 
     img_files = os.listdir(img_path)
 
