@@ -4,6 +4,7 @@ from flask import render_template, redirect, request, session, url_for, copy_cur
 import os
 import cgitb; cgitb.enable()
 import os
+import jsonpickle
 
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -27,15 +28,16 @@ def get_images():
     print(os.listdir("."))
     img_path = list(request.form.keys())[0]
 
+    #print(os.listdir("./mysite/flask_app/static/main/images/rpm-images/"))
+
     img_files = os.listdir(img_path)
 
-    only_img_files = []
+    only_img_files = ""
 
     # Only extensions that should be used are image extensions
     for img in img_files:
         extension = img.split(".")[-1]
         if extension == "png" or extension == "jpg" or extension == "jpeg" or extension == "gif":
-            only_img_files.append(img)
+            only_img_files += img + " "
         
-
-    return only_img_files
+    return only_img_files[:-1]

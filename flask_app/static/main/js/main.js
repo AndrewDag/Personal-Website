@@ -107,10 +107,12 @@ function change_image(inc, clicked_element)
     jQuery.ajax({
         url: "/getimagefiles",
         type: "POST",
-        data: "./flask_app/static/main/images/" + clicked_element.id + "-images/", // Python path
+        data: "./flask_app/static/main/images/" + clicked_element.id + "-images/", // Python path (for pany: "./mysite/flask_app/static/main/images/")
         success: function (img_arr) 
         {
-            image_array = img_arr;
+            image_array = img_arr.split(" ");
+
+            console.log(image_array)
             
             // If going next, current index cannot be larger than image array. If going previous, current index cannot be zero.
             if((inc === 1 && current_img_index != image_array.length-1) || (inc === -1 && current_img_index != 0) || (inc === 0))
