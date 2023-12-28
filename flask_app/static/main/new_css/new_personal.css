@@ -102,8 +102,10 @@
 
 #mainimage
 {
-    width: 30%;
+    width: 60%;
     height: auto;
+    max-width: 400px;
+    max-height: 400px;
 
     margin-bottom: 5%;
 }
@@ -213,5 +215,10 @@
     .boxtoseemore
     {
         height: 30px;
+    }
+
+    #mainimage
+    {
+        width: 60%;
     }
 }
