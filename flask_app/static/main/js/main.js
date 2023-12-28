@@ -29,9 +29,6 @@ function displaymultiimage(event)
     //Box for images to be put into
     let imgbox = document.getElementById("imgbox");
 
-    let image_folder = "flask_app/static/main/images/" + clicked_element.id + "-images/";   //This one works for Python section
-    let js_image_folder = "../../static/main/images/" + clicked_element.id + "-images/";    //This is for Javascript
-
 
     /*Toggle on overlay */
     overlay.style.display = "flex";
@@ -110,7 +107,7 @@ function change_image(inc, clicked_element)
     jQuery.ajax({
         url: "/getimagefiles",
         type: "POST",
-        data: "flask_app/static/main/images/" + clicked_element.id + "-images/",
+        data: "./flask_app/static/main/images/" + clicked_element.id + "-images/", // Python path
         success: function (img_arr) 
         {
             image_array = img_arr;
