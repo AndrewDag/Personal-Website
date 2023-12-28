@@ -5,7 +5,6 @@
     align-items: center;
 
     margin-top: 3%;
-    margin-bottom: 3%;
 }
 
 .projectcontent h1
@@ -43,6 +42,7 @@
     align-items: center;
 }
 
+/* PROJECT WITH IMAGE */
 .projectwithimage
 {
     display: flex;
@@ -52,21 +52,6 @@
     width: 60%;
 
     margin-bottom: 2%;
-}
-
-.companytime
-{
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-}
-
-#datetext
-{
-    font-size: 15px;
-
-    margin: 0;
 }
 
 .projectwithimage h2
@@ -87,6 +72,32 @@
 
     font-size: 25px;
 
+}
+
+.projectwithimage p
+{
+    text-decoration: none;
+    font-size: 20px;
+    
+    font-family:'Courier New', Courier, monospace;
+
+    margin: 0;
+}
+
+/* OTHER */
+.companytime
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+#datetext
+{
+    font-size: 15px;
+
+    margin: 0;
 }
 
 #mainimage
@@ -146,6 +157,7 @@
     align-items: center;
     width: 100%;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #singleskill
@@ -188,8 +200,18 @@
         font-size: 15px;
     }
 
+    .projectwithmultiimage p
+    {
+        font-size: 15px;
+    }
+
     .projectcontent h1
     {
         font-size: 40px;
+    }
+
+    .boxtoseemore
+    {
+        height: 30px;
     }
 }

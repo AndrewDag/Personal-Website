@@ -19,19 +19,6 @@ def create_app(debug=False):
 	# The secret key is used to cryptographically-sign the cookies used for storing the session data.
 	app.secret_key = 'AKWNF1231082fksejfOSEHFOISEHF24142124124124124iesfhsoijsopdjf'
 	# ----------------------------------------------
-	os.makedirs(os.path.join(app.instance_path, 'nft_images'), exist_ok=True)
-
-	from .utils.blockchain.database import database
-	db = database()
-	db.createTables(purge=True)
-	
-	# NEW IN HOMEWORK 3 ----------------------------
-	# This will create a user
-	db.createUser(email='owner@email.com' ,password='password', role='owner')
-	db.createUser(email='guest@email.com' ,password='password', role='guest')
-	db.createUser(email="dagost37@msu.edu", password="tester", role='owner')
-	db.createUser(email="test", password="test", role='guest')
-	# ----------------------------------------------
 
 	with app.app_context():
 		from . import routes

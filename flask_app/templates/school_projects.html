@@ -1,24 +1,33 @@
 {% extends 'shared/new_layout.html' %}
 
 {% block maincontent %}
+    
+</div>
 <div class="projectcontent">
     <h1>COLLABORATIVE DESIGN</h1>
     <hr>
     <div class="projectwrap">
-        <div class="projectwithimage">
+        <div class="projectwithmultiimage" id="rpm">
             <div class="companytime">
                 <h2>AI-Based Chat Service</h2>
                 <p id="datetext">8/23 - 12/23</p>
             </div>
-            
-            <img id='mainimage' src="../static/main/images/rpm-logo.jpg" alt="RPM Logo" loading="lazy">
+            <div class="imagebox" onclick="displaymultiimage.call(this, event)">
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i7QGWzfzTzg?si=iSZRP3R0itf5oEYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <!-- <img id='mainimage' class='mainimage' src="../static/main/images/rpm-logo.jpg" alt="RPM Logo" loading="lazy"> -->
+                <div class="boxtoseemore">
+                    <p>Click to see more!</p>
+                </div>
+            </div>
             <h3>Summary</h3>
-            <p>As apart of the Michigan State University Computer Science Capstone experience, I am working with RPM, a supply chain
+            <p>As apart of the Michigan State University Computer Science Capstone experience, I worked on a team of fellow students with RPM, a supply chain
                 and logistics company, to develop an AI Chatbot that would help improve their customer efficiency and reduce
-                the need for a 24/7 on-call representitive. The Chatbot is a backend service that will give dynamic responses to users and offer a variety of different
-                questions that it can answer. The Chatbot will be able to answer FAQ-style questions, but it also has the ability to pull
-                information off of RPM's Turvo database. This database is a .NET C# database that holds information about RPM's shipments, orders, and more.
-                The Chatbot will be able to recieve the information from the database through API calls to the Turvo database and report it back to the user.
+                the call load for the on-call representitives. <br><br>
+                The Chatbot is a backend service that gives dynamic responses to users through the use of OpenAI's ChatGPT API. It offers a variety of different
+                FAQ-style questions that it can answer but it also has the ability to pull
+                information off of Turvo, an API that hosts RPM's .NET C# database which has information in regards to shipments, orders, and more. 
             </p>
             
             <h3>Skills</h3>
@@ -42,6 +51,7 @@
                     <img src="../static/main/images/jinja.png" alt="Jinja Logo" title="Jinja" loading="lazy">
                 </div>
         </div>
+        </div>
     <h1>WEB DEVELOPMENT ARCHITECTURE</h1>
     <hr>
     <div class="projectwrap">
@@ -50,14 +60,10 @@
                 <h2>Personal Website</h2>
                 <p id="datetext">1/23 - 5/23</p>
             </div>
-            
             <img id='mainimage' src="../static/main/images/oldwebsite.png" alt="Old Website" loading="lazy">
             <h3>Summary</h3>
             <p>During CSE 477 I developed a personal website that made use of HTML, CSS, Javascript, Jinja, SQL,  and Python's Flask. <br><br>
-                Some of the features of the website include a Javascript piano, a login and sign up system, and an NFT Marketplace with a transaction history system that uses SQL tables to store the information.
-                It is directly accessible from this website, and you can view the website <a href="/home">here.</a><br><br>
-                Unfortunately due to limitations of the service I am using to host this website, the NFT marketplace is not functional.
-                Although, every other feature should work just fine.
+                Some of the features of the website included a Javascript piano, a login and sign up system, and an NFT Marketplace with a transaction history system that uses SQL tables to store the information.
             </p>
             
             <h3>Skills</h3>

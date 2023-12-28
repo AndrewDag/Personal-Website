@@ -1,0 +1,202 @@
+/* PROJECT WITH MULTI IMAGE */
+.projectwithmultiimage
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 60%;
+
+    margin-bottom: 2%;
+    
+}
+
+.projectwithmultiimage h2
+{
+    color: #454955;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+
+    margin: 0;
+}
+
+.projectwithmultiimage h3
+{
+    color: #454955;
+    align-self:flex-start;
+
+    font-family:'Courier New', Courier, monospace;
+
+    font-size: 25px;
+
+}
+
+.projectwithmultiimage p
+{
+    text-decoration: none;
+    font-size: 20px;
+    
+    font-family:'Courier New', Courier, monospace;
+
+    margin: 0;
+}
+
+.imagebox
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boxtoseemore
+{
+    width: 100%;
+    height: 50px;
+    min-width: 350px;
+    background-color: black;
+    opacity: 50%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: -1;
+}
+
+.imagebox:hover .boxtoseemore
+{
+    opacity: 100%;
+}
+
+.boxtoseemore p
+{
+    color: white;
+    padding: 10px;
+}
+
+/* IMAGE DISPLAY OVERLAY */
+.imagedisplayoverlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 0;
+}
+
+.overlayimgbox
+{
+    width: 60vw;
+    height: 60vh;
+    
+
+    position: fixed;
+    top: 20%;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#currentimage
+{
+    max-width: 80%;
+    max-height: 100%;
+    z-index: 200;
+}
+
+.overlayimgbox:hover .arrows
+{
+    opacity: 80%;
+}
+
+.arrows
+{
+    color: white;
+    background-color: black;
+    width: 8%;
+    height: 25%;
+
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 30%;
+
+    cursor: pointer;
+}
+
+.arrows p
+{
+    font-size: 40px;
+}
+
+.xbutton
+{
+    position: fixed;
+    align-self: start;
+    
+    width: 50px;
+    height: 50px;
+
+    background-color: white;
+    border: 4px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    opacity: 30%;
+}
+
+.xbutton p
+{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.overlayimgbox:hover .xbutton
+{
+    opacity: 80%;
+}
+
+@media screen and (max-width: 900px)
+{
+
+    .overlayimgbox
+    {
+        width: 100vw;
+        height: 50vh;
+    }
+    .arrows
+    {
+        height: 15%;
+        width: 15%;
+        
+    }
+    .arrows p
+    {
+        font-size: 20px;
+    }
+
+    .xbutton
+    {
+        width: 30px;
+        height: 30px;
+    }
+}
