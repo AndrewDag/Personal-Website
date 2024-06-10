@@ -109,7 +109,7 @@ function change_image(inc, clicked_element)
     jQuery.ajax({
         url: "/getimagefiles",
         type: "POST",
-        data: "./mysite/flask_app/static/main/images/" + clicked_element.id + "-images/", // Python path (for pany: "./mysite/flask_app/static/main/images/")
+        data: "./flask_app/static/main/images/" + clicked_element.id + "-images/", // Python path (for pany: "./mysite/flask_app/static/main/images/")
         success: function (img_arr) 
         {
             image_array = img_arr.split(" ");
